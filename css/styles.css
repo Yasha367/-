@@ -96,8 +96,7 @@ body{
 /* ---------------------HEADER-------------------------- */
 .header{
     background-color: #fff;
-    padding-top: 24px;
-    padding-bottom: 25px;
+    border: 1px solid #ECECEC;
 }
 .header .container {
     display: flex;
@@ -109,31 +108,26 @@ body{
 .header-item:not(:last-child){
     margin-right: 50px;
 }
+.logo-header{
+    margin-right: 30px;
+}
 .header-item-contact{
     display: flex;
-}
-.header-item-contact:hover,
-.header-item-contact:focus {
-    color:#2196F3;
 }
 .header-ico{
     fill: #757575;
 }
-.header-ico-list{
+.header-ico-item{
     display: flex;
     margin-right: 10px;
-}
-    
-.header-item-contact:hover .header-ico,
-.header-item-contact:focus .header-ico{
-    color:#2196F3;
-    fill: #2196F3;
 }
 .header-link:hover,
 .header-link:focus {
     color: #2196F3;
 }
 .header-link-studio{
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -141,6 +135,8 @@ body{
     color:var(--leading-page);
 }
 .header-link{
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -149,6 +145,8 @@ body{
 }
 .header-logo{
     margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 .logo-first{
     color: var(--logo-title-first);
@@ -160,11 +158,20 @@ body{
     display: flex;
     justify-content: center;
     margin-left: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .header-item-contact:not(:last-child){
     margin-right: 50px;
 }
-
+.header-tel:hover,
+.header-tel:focus{
+    color:#2196f3;
+}
+.header-mail:hover,
+.header-mail:focus{
+    color: #2196F3;
+}
 .header-mail{
     font-weight: 500;
     font-size: 14px;
@@ -179,6 +186,15 @@ body{
     letter-spacing: 0.02em;
     color: var(--header-contacts);
 }
+.header-ico:focus{
+    fill: #2196F3;
+}
+.header-item-contact:hover .header-ico,
+.header-item-contact:focus .header-ico{
+    color:#2196F3;
+    fill: #2196F3;
+}
+
 /* ---------------------HERO-------------------------- */
 .hero{
     background-color: #2F303A;
@@ -186,6 +202,8 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1600px 600px;
+    width: 1600px;
+    margin: 0 auto;
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -226,9 +244,6 @@ body{
 
     color: #FFFFFF;
 }
-.hero-text{
-    
-}
 /* -----------------------PRICES------------------------ */
 .prices{
     padding-top: 94px;
@@ -244,12 +259,14 @@ body{
     justify-content: center;
     margin-bottom: 30px;
 }
+.prices-svg{
+    
+}
 .prices-text{
     width: 270px;
 }
 .prices-list{
     display: flex;
-    margin-bottom: 95px;
 }
 .prices-item:not(:last-child) {
     margin-right: 30px;
@@ -261,7 +278,7 @@ body{
 }
 /* -----------------------OCCUPATIANS------------------------ */
 .occupations{
-    margin-bottom: 95px;
+    padding-bottom: 95px;
 }
 .occupations-top-text{
     font-weight: 700;
@@ -287,7 +304,7 @@ body{
 }
 .occupations-list{
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
 }
 /* ---------------------TEAM-------------------------- */
 .team{
@@ -298,11 +315,10 @@ body{
 }
 .team-list{
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
 }
 .team-item{
     background: #FFFFFF;
-    /* material shadow v1 */
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -335,6 +351,7 @@ body{
     line-height: 1.18;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 16px;
 }
 .team-soc{
     display: flex;
@@ -387,28 +404,29 @@ body{
     justify-content: space-between;
 }
 .customer-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.customer-link {
+    
     width: 170px;
     height: 92px;
 
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 
+    fill: #AFB1B8;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.customer-link {
-    fill: #AFB1B8;
-}
-.customer-item:hover, 
-.customer-item:focus{
+.customer-link:hover, 
+.customer-link:focus{
     border-color: #2196F3;
-}
-
-.customer-item:hover .customer-link, 
-.customer-item:focus .customer-link{
     fill: #2196F3;
 }
+
 /* ---------------------FOOTER-------------------------- */
 .footer{
     background: #2F303A;
@@ -499,8 +517,6 @@ body{
 }
 .header-portfolio{
     border: 1px solid #ECECEC;
-    padding-top: 24px;
-    padding-bottom: 25px;
 }
 .header-item-tel:not(:last-child) {
     margin-left: 250px;
