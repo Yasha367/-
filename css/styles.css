@@ -116,6 +116,7 @@ body{
 }
 .header-ico{
     fill: #757575;
+    margin-right: 10px;
 }
 .header-ico-item{
     display: flex;
@@ -150,6 +151,7 @@ body{
 }
 .logo-first{
     color: var(--logo-title-first);
+    margin-right: 93px;
 }
 .logo-second{
     color: var(--logo-title-second);
@@ -178,6 +180,8 @@ body{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--header-contacts);
+    display: flex;
+    align-items: center;
 }
 .header-tel{
     font-weight: 500;
@@ -185,6 +189,8 @@ body{
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--header-contacts);
+    display: flex;
+    align-items: center;
 }
 .header-ico:focus{
     fill: #2196F3;
@@ -241,7 +247,7 @@ body{
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-
+    
     color: #FFFFFF;
 }
 /* -----------------------PRICES------------------------ */
@@ -268,13 +274,17 @@ body{
 .prices-list{
     display: flex;
 }
+.prices-item{
+    flex-basis: calc(100%-3*30);
+}
 .prices-item:not(:last-child) {
     margin-right: 30px;
 }
 .prices-top-text{
     color: #212121;
     margin-bottom: 10px;
-    width: 270px;
+    display: flex;
+    text-transform: uppercase;
 }
 /* -----------------------OCCUPATIANS------------------------ */
 .occupations{
@@ -324,8 +334,8 @@ body{
     border-radius: 0px 0px 4px 4px;
 }
 .team-top-text{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .team-title{
     font-weight: 700;
@@ -436,10 +446,8 @@ body{
 .footer .container{
     display: flex;
 }
-
-.footer-logo-list{
-    margin-bottom: 20px;
-    width: 145px;
+.footer-list{
+    margin-top: 20px;
 }
 .footer-logo-second{
     color: #fff;
@@ -464,7 +472,12 @@ body{
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
+.footer-contacts:hover,
+.footer-contacts:focus{
+    color: #2196F3;
+}
 .foter-connect{
+    justify-content: baseline;
     margin-left: 70px;
 }
 .foter-text{
@@ -476,6 +489,8 @@ body{
     letter-spacing: 0.03em;
     color: #fff;
     margin-bottom: 20px;
+    display: flex;
+    text-transform: uppercase;
 }
 .foter-soc{
     display: flex;
