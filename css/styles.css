@@ -187,8 +187,13 @@ body{
     display: flex;
     align-items: center;
 }
-.header-item-contact:hover .header-ico,
-.header-item-contact:focus .header-ico{
+.header-mail:hover .header-ico,
+.header-mail:focus .header-ico{
+    fill: #2196F3;
+}
+
+.header-tel:hover .header-ico,
+.header-tel:focus .header-ico{
     fill: #2196F3;
 }
 
@@ -225,6 +230,10 @@ body{
     line-height: 1.87;
     letter-spacing: 0.06em;
     color: #FFFFFF;
+    cursor: pointer;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 .hero-title{
     max-width: 696px;
@@ -253,9 +262,6 @@ body{
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-}
-.prices-svg{
-    
 }
 .prices-text{
     width: 270px;
@@ -399,7 +405,7 @@ body{
 }
 .customer-list {
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
 }
 .customer-item {
     display: flex;
@@ -431,10 +437,10 @@ body{
     padding-top: 60px;
     padding-bottom: 60px;
     display: flex;
-    align-items: baseline;
 }
 .footer .container{
     display: flex;
+    align-items: baseline;
 }
 .footer-list{
     margin-top: 20px;
@@ -560,6 +566,7 @@ body{
     border: 0;
     border-radius: 4px;
     background-color: #F5F4FA;
+    cursor: pointer;
 }
 /* ---------------------GALLERY-------------------------- */
 .gallery-top-text{
@@ -568,17 +575,22 @@ body{
     line-height: 2;
     letter-spacing: 0.06em;
     color: #212121;
-    padding-left: 24px;
 }
 .gallery-item:hover,
-.gallery-item:focus{
+.gallery-item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.gallery-link:hover,
+.gallery-link:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .gallery-link{
     flex-basis: auto;
 }
 .portfolio-text{
-    padding: 20px 20px 20px 0px;
+    padding: 20px 24px;
     border: 1px solid#EEEEEE;
     border-top: 0;
 }
@@ -587,7 +599,6 @@ body{
     line-height: 1.88;
     letter-spacing: 0.03em;
     color:#757575;
-    padding-left: 24px;
 }
 .gallery-list{
     display: flex;
@@ -604,4 +615,5 @@ body{
 }
 .footer-portfolio .portfolio-container{
     display: flex;
+    align-items: baseline;
 }
