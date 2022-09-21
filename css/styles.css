@@ -582,6 +582,7 @@ body{
 }
 .gallery-link{
     flex-basis: auto;
+    display: block;
 }
 .portfolio-text{
     padding: 20px 24px;
