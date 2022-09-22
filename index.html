@@ -16,9 +16,15 @@
             <a href="./index.html" lang="en" class="logo-first logo-text link">Web<span class="logo-second logo-text link">Studio</span></a>
             <nav>
                 <ul class="header-list list">
-                    <li class="header-item"><a href="" class="header-link-studio link">Студія</a></li>
-                    <li class="header-item"><a href="./portfolio.html" class="header-link link">Портфоліо</a></li>
-                    <li class="header-item"><a href="" class="header-link link">Контакти</a></li>
+                    <li class="header-item">
+                        <a href="./index.html" class="header-link link">Студія</a>
+                    </li>
+                    <li class="header-item">
+                        <a href="./portfolio.html" class="header-link link">Портфоліо</a>
+                    </li>
+                    <li class="header-item">
+                        <a href="" class="header-link link">Контакти</a>
+                    </li>
                 </ul>
             </nav>
             <ul class="header-contacs-list list">
@@ -46,7 +52,7 @@
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="hero-btn">Замовити послугу</button>
+                <button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
             </div>
         </section>
         <section class="prices">
@@ -96,9 +102,25 @@
             <div class="container">
                 <h2 class="occupations-main-title">Чим ми займаємося</h2>
                 <ul class="occupations-list list">
-                    <li><img src="./img/img1.jpg" alt="клавиатура в руках" class="occupations-img" width="370" height="294"></li>
-                    <li><img src="./img/img2.jpg" alt="телефон в руках" class="occupations-img" width="370" height="294"></li>
-                    <li><img src="./img/img3.jpg" alt="планшет в руках" class="occupations-img" width="370" height="294"></li>
+                    <li class="occupations-list">
+                        <div class="occupations-top-wrap">
+                            <img src="./img/img1.jpg" alt="клавиатура в руках" class="occupations-img" width="370" height="294">
+                            <p class="occupations-visibl">Десктопні додатки</p>
+                        </div>
+                    </li>
+                    <li class="occupations-list">
+                        <div class="occupations-top-wrap">
+                            <img src="./img/img2.jpg" alt="телефон в руках" class="occupations-img" width="370" height="294">
+                            <p class="occupations-visibl">Мобільні додатки</p>
+                        </div>
+                        
+                    </li>
+                    <li class="occupations-list">
+                        <div class="occupations-top-wrap">
+                            <img src="./img/img3.jpg" alt="планшет в руках" class="occupations-img" width="370" height="294">
+                            <p class="occupations-visibl">Дизайнерські рішення</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -364,6 +386,20 @@
             </div>
         </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close" data-modal-close>
+                <svg class="icon-close" width="18" height="18">
+                    <use href="./img/icons.svg#icon-close-black"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
