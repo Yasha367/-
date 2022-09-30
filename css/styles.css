@@ -642,6 +642,7 @@ body{
     border-radius: 4px;
     background-color: transparent;
     color: #FFFFFF;
+    padding-left: 16px;
 }
 .foter-join-input:focus{
     outline-color: #2196f3;
@@ -873,15 +874,11 @@ body{
     letter-spacing: 0.03em;
 
     color: #212121;
-    text-align: center;
-}
-.modal-form {
-}
-.input-fild {
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 .input-wrap {
     position: relative;
+    margin-bottom: 28px;
 }
 .form-imput {
     width: 100%;
@@ -909,6 +906,7 @@ body{
     letter-spacing: 0.01em;
 
     color: #757575;
+    padding-bottom: 4px;
 }
 .form-imput:hover{
     border-color: #2196f3;
@@ -930,6 +928,7 @@ body{
     border-radius: 4px;
     resize: none;
     transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 18px;
 }
 .modal-coment:hover{
     border-color: #2196f3;
