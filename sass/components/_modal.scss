@@ -1,0 +1,210 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms, visibility 250ms;
+}
+
+.modal{
+    position: absolute;
+    width: 528px;
+    min-height: 581px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+}
+
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, 0%) scale(0);
+}
+
+.modal-close{
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.modal-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+    margin-bottom: 12px;
+}
+.input-wrap {
+    position: relative;
+    margin-bottom: 10px;
+}
+.form-imput {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover{
+        border-color: #2196f3;
+    }
+    &:hover + .input-icon{
+        fill: #2196f3;
+    }
+    &:focus{
+        outline-color: #2196F3;
+    }
+    &:focus + .input-icon{
+        fill: #2196F3;
+    }
+}
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-teg {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+    letter-spacing: 0.01em;
+
+    color: #757575;
+    padding-bottom: 4px;
+}
+
+.modal-coment{
+    padding: 12px 16px;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+    transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 18px;
+}
+.modal-coment:hover{
+    border-color: #2196f3;
+}
+.modal-coment:focus{
+    outline-color: #2196f3;
+}
+.modal-coment::placeholder{
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.check-text{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+
+    letter-spacing: 0.03em;
+
+    color: #757575;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.check-text span{
+    width: 16px;
+    height: 15px;
+    border: 2px solid #090b13;
+    border-radius: 3px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-icon{
+    fill: transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.input-check:checked + .check-text span{
+    background-color: #2196F3;
+    border-color: #2196F3;
+}
+.input-check:focus + .check-text span{
+    border-color: #2196F3;
+}
+.input-check:checked + .check-text .check-icon{
+    fill: #FFFFFF;
+}
+.check-box{
+}
+.treaty{
+    text-decoration-line: underline;
+    color: #2196F3;
+}
+.modal-btn{
+    background-color: #2196F3;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    padding: 10px 52px;
+
+    color: #FFFFFF;
+    
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus{
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+}

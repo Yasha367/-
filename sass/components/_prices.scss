@@ -1,0 +1,32 @@
+.prices{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.prices-svg-item{
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.prices-text{
+    width: 270px;
+}
+.prices-list{
+    display: flex;
+}
+.prices-item{
+    flex-basis: calc(100% - 3 * 30px);
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+.prices-top-text{
+    color: #212121;
+    margin-bottom: 10px;
+    display: flex;
+    text-transform: uppercase;
+}
