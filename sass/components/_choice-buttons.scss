@@ -1,7 +1,5 @@
 .btn-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(flex, center, center);
     margin-bottom: 50px;
 }
 .btn-item:not(:last-child){
@@ -10,11 +8,8 @@
 .choice-btn{
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
+    @include font(500, 16px, 1.62, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     padding: 6px 25px 6px 25px;
 
     border: 0;

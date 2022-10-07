@@ -7,16 +7,14 @@
     height: 120px;
     background-color: #F5F4FA;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(flex, center, center);
     margin-bottom: 30px;
 }
 .prices-text{
     width: 270px;
 }
 .prices-list{
-    display: flex;
+    @include flex(flex, null, null);
 }
 .prices-item{
     flex-basis: calc(100% - 3 * 30px);
@@ -27,6 +25,6 @@
 .prices-top-text{
     color: #212121;
     margin-bottom: 10px;
-    display: flex;
+    @include flex(flex, null, null);
     text-transform: uppercase;
 }

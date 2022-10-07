@@ -2,29 +2,20 @@
     padding-bottom: 95px;
 }
 .occupations-top-text{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
 }
 .occupations-text{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(null, 14px, 1.71, 0.03em);
 }
 .occupations-main-title{
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    @include font(700, 36px, 1.16, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     color:#212121;
     margin-bottom: 50px;
 }
 .occupations-list{
-    display: flex;
+    @include flex(flex, null, null);
     gap: 30px;
 }
 .occupations-top-wrap{
@@ -37,11 +28,8 @@
     left: 0;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
+    @include font(700, 14px, 1.14, 0.03em);
     text-align: center;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
 
     color: #FFFFFF;
