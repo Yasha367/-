@@ -1,16 +1,30 @@
+%flex{
+    display: flex;
+}
+%conetnt{
+    display: flex;
+    justify-content: center;
+}
+%second-conetnt{
+    display: flex;
+    align-items: center;
+}
+%contact{
+    display: flex;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 .header{
     background-color: #fff;
     border: 1px solid #ECECEC;
 }
 .header .container {
-    display: flex;
-    align-items: center;
+    @extend %second-conetnt;
 }
 .header-list{
-    display: flex;
+    @extend %flex;
 }
 .header-item-contact{
-    display: flex;
+    @extend %flex;
     &:not(:last-child){
         margin-right: 50px;
     }
@@ -53,18 +67,17 @@
     color: var(--logo-title-second);
 }
 .header-contacs-list{
-    display: flex;
-    justify-content: center;
+    @extend %conetnt;
     margin-left: auto;
     padding-top: 32px;
     padding-bottom: 32px;
 }
 
 .header-top-list{
-    display: flex;
+    @extend %flex;
 }
 .header-list{
-    display: flex;
+    @extend %flex;
 }
 .header-item:not(:last-child){
     margin-right: 50px;
@@ -101,24 +114,29 @@
 
 /* contact */
 .header-tel{
-    display: flex;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %contact;
 }
 .header-mail{
-    display: flex;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @extend %contact;
 }
 .header-ico{
     fill: #757575;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .header-mail:hover &,
+    .header-mail:focus &{
+        fill: #2196F3;
+    }
+    .header-tel:hover &,
+    .header-tel:focus &{
+        fill: #2196F3;
+    }
 }
 .header-ico-list{
-    display: flex;
+    @extend %flex;
     margin-right: 10px;
 }
 .header-contacs-list{
-    display: flex;
-    justify-content: center;
+    @extend %conetnt;
     margin-left: auto;
 }
 .header-item-contact:not(:last-child){
@@ -130,12 +148,7 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--header-contacts);
-    display: flex;
-    align-items: center;
-    &:hover .header-ico,
-    &:focus .header-ico{
-        fill: #2196F3;
-    }
+    @extend %second-conetnt;
     &:hover,
     &:focus{
         color: #2196F3;
@@ -147,12 +160,8 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--header-contacts);
-    display: flex;
-    align-items: center;
-    &:hover .header-ico,
-    &:focus .header-ico{
-        fill: #2196F3;
-    }
+    @extend %second-conetnt;
+    
     &:hover,
     &:focus{
         color:#2196f3;

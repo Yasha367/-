@@ -1,3 +1,11 @@
+@mixin flex {
+    display: flex;
+}
+%conetnt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .customer {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -15,13 +23,11 @@
     margin-bottom: 50px;
 }
 .customer-list {
-    display: flex;
+    @extend %flex;
     gap: 30px;
 }
 .customer-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %conetnt;
 }
 .customer-link {
     
@@ -32,9 +38,7 @@
     border-radius: 4px;
 
     fill: #AFB1B8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %conetnt;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover, 
     &:focus{
