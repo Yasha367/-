@@ -23,13 +23,13 @@
     @include font(500, 14px, 1.14, 0.02em);
     color: var(--header-link);
 }
-.logo-first{
+.header__logo-first{
     color: var(--logo-title-first);
     margin-right: 93px;
     padding-top: 24px;
     padding-bottom: 24px;
 }
-.logo-second{
+.header__logo-second{
     color: var(--logo-title-second);
 }
 .navigation__contacs-list{

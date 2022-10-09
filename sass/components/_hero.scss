@@ -11,7 +11,7 @@
 .hero-item{
     @include flex(flex, center, center);
 }
-.hero-btn{
+.hero__btn{
     font-family: 'Roboto', sans-serif;
     background: #2196F3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -27,7 +27,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-.hero-title{
+.hero__title{
     max-width: 696px;
     margin-left: auto;
     margin-right: auto;

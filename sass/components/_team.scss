@@ -32,7 +32,7 @@
 }
 .team-work{
     @include font(null, 16px, 1.18, 0.03em);
-    @include flex(null, null, center);
+    @include flex(flex, center, null);
     margin-bottom: 16px;
 }
 .team-soc{
