@@ -3,10 +3,10 @@
     background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/backgrownd.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 1600px 600px;
+    background-size: 100% auto;
     margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
 }
 .hero-item{
     @include flex(flex, center, center);

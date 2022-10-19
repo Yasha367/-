@@ -5,24 +5,6 @@
         @include flex(flex, null, center);
     }
 }
-.navigation{
-    @include flex(flex, center, null)
-}
-.navigation__item-contact{
-    @include flex(flex, null, null);
-    &:not(:last-child){
-        margin-right: 50px;
-    }
-}
-.navigation__ico{
-    fill: #757575;
-    margin-right: 10px;
-}
-.navigation__link{
-    
-    @include font(500, 14px, 1.14, 0.02em);
-    color: var(--header-link);
-}
 .header__logo-first{
     color: var(--logo-title-first);
     margin-right: 93px;
@@ -32,15 +14,13 @@
 .header__logo-second{
     color: var(--logo-title-second);
 }
-.navigation__contacs-list{
-    @include flex(flex, center, null);
-    margin-left: auto;
-    padding-top: 32px;
-    padding-bottom: 32px;
+.navigation{
+    @include flex(flex, center, null)
 }
 
-.navigation__top-list{
-    @include flex(flex, null, null);
+.navigation__link{
+    @include font(500, 14px, 1.14, 0.02em);
+    color: var(--header-link);
 }
 .navigation__list{
     @include flex(flex, null, null);
@@ -52,13 +32,10 @@
         margin-right: 50px;
     }
 }
-
 .navigation__link{
     position: relative;
     @include font(500, 14px, 1.14, 0.02em);
     color: var(--header-link);
-    padding-top: 32px;
-    padding-bottom: 32px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color;
     &::after{
@@ -81,57 +58,56 @@
         color: #2196F3;
     }
 }
-
 /* contact */
-.navigation__tel{
-    @include flex(flex, null, null);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.navigation__mail{
-    @include flex(flex, null, null);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.navigation__ico{
-    fill: #757575;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    .navigation__mail:hover &,
-    .navigation__mail:focus &{
-        fill: #2196F3;
-    }
-    .navigation__tel:hover &,
-    .navigation__tel:focus &{
-        fill: #2196F3;
-    }
-}
-.navigation__ico-list{
-    @include flex(flex, null, null);
-    margin-right: 10px;
-}
-.navigation__contacs-list{
+.header__contacs-list{
     @include flex(flex, center, null);
-    margin-left: 290px;
+    margin-left: auto;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
-.navigation__item-contact:not(:last-child){
-    margin-right: 50px;
+.header__item-contact{
+    @include flex(flex, null, null);
+    &:not(:last-child){
+        margin-right: 50px;
+    }
 }
-.navigation__mail{
+.header__mail{
     @include font(500, 14px, 1.14, 0.02em);
     color: var(--header-contacts);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include flex(flex, null, center);
     &:hover,
     &:focus{
         color: #2196F3;
     }
 }
-.navigation__tel{
+.header__tel{
     @include font(500, 14px, 1.14, 0.02em);
     color: var(--header-contacts);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     @include flex(flex, null, center);
-    
     &:hover,
     &:focus{
         color:#2196f3;
     }
 }
-
-
+.header__ico{
+    fill: #757575;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .header__mail:hover &,
+    .header__mail:focus &{
+        fill: #2196F3;
+    }
+    .header__tel:hover &,
+    .header__tel:focus &{
+        fill: #2196F3;
+    }
+}
+.header__ico-list{
+    @include flex(flex, null, null);
+    margin-right: 10px;
+}
+.header__ico{
+    fill: #757575;
+    margin-right: 10px;
+}
