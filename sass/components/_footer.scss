@@ -5,7 +5,22 @@
     @include flex(flex, null, null);
 }
 .footer .container{
-    @include flex(flex, null, baseline);
+    @include flex(flex, null, null);
+    flex-direction: row;
+    @media screen and (min-width: 480px){
+        gap: 60px;
+        // flex-direction: column;
+    }
+    @media screen and (min-width: 768px){
+        width: calc((100% - 165px)/2);
+        gap: 60px;
+        
+        flex-wrap: wrap;
+    }
+}
+.footer-addres{
+    @include flex(flex, center, null);
+    flex-wrap: wrap;
 }
 .footer-list{
     margin-top: 20px;
@@ -15,17 +30,26 @@
 }
 .footer-logo-first{
     color: #2196F3;
+    display: flex;
+    justify-content: center;
 }
+
 .footer-item:not(:last-child){
     margin-bottom: 9px;
 }
 .footer-map{
     font-style: normal;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     @include font(null, 14px, 1.71, 0.03em);
     color: #FFFFFF;
 }
+
 .footer-contacts{
     font-style: normal;
+    display: flex;
+    justify-content: center;
     @include font(null, 14px, 1.71, 0.03em);
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -36,10 +60,15 @@
 }
 
 .foter-connect{
-    @include flex(null, baseline, null);
-    margin-left: 70px;
+    @include flex(flex, center, null);
+    width: 100%;
+    flex-wrap: wrap;
+    // margin-left: 70px;
 }
 .foter-text{
+    width: 100%;
+    display: flex;
+    justify-content: center;
     font-family: 'Roboto';
     font-style: normal;
     @include font(700, 14px, 1.14, 0.03em);
@@ -69,23 +98,35 @@
 }
 
 .foter-join{
-    margin-left: 93px;
+    // margin-left: 93px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .foter-form{
-    @include flex(flex, null, null);
+    @include flex(flex, center, null);
+    width: 100%;
+    flex-wrap: wrap;
     gap: 12px;
 }
 .foter-join-text{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
     font-family: 'Roboto';
     font-style: normal;
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
+    margin-right: auto;
+    margin-left: auto;
 
     color: #FFFFFF; 
     margin-bottom: 20px;
 }
 .foter-join-input{
-    width: 358px;
+    width: 100%;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));

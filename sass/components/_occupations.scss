@@ -1,5 +1,9 @@
 .occupations{
     padding-bottom: 95px;
+    display: none;
+    @media screen and (min-width: 1200px){
+        display: flex;
+    }
 }
 .occupations-top-text{
     @include font(700, 14px, 1.14, 0.03em);
