@@ -6,21 +6,30 @@
 }
 .footer .container{
     @include flex(flex, null, null);
-    flex-direction: row;
     @media screen and (min-width: 480px){
         gap: 60px;
-        // flex-direction: column;
+        flex-direction: column;
     }
     @media screen and (min-width: 768px){
-        width: calc((100% - 165px)/2);
-        gap: 60px;
-        
+        width: calc((100% - 60px)/2);
+        flex-direction: row;
         flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px){
+        width: calc((100% - 90px)/3);
+        flex-wrap: nowrap;
     }
 }
 .footer-addres{
     @include flex(flex, center, null);
+    flex-direction: column;
     flex-wrap: wrap;
+    @media screen and (min-width: 768px){
+    }
+    @media screen and (min-width: 1200px){
+        justify-content: start;
+
+    }
 }
 .footer-list{
     margin-top: 20px;
@@ -41,7 +50,6 @@
     font-style: normal;
     display: flex;
     justify-content: center;
-    width: 100%;
     @include font(null, 14px, 1.71, 0.03em);
     color: #FFFFFF;
 }
@@ -60,13 +68,19 @@
 }
 
 .foter-connect{
-    @include flex(flex, center, null);
-    width: 100%;
+    @include flex(flex, null, null);
+    flex-direction: column;
     flex-wrap: wrap;
-    // margin-left: 70px;
+    width: 100%;
+    @media screen and (min-width: 768px){
+        width: calc((100% - 60px)/2);
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 .foter-text{
-    width: 100%;
+    // width: 100%;
     display: flex;
     justify-content: center;
     font-family: 'Roboto';
@@ -78,7 +92,7 @@
     text-transform: uppercase;
 }
 .foter-soc{
-    @include flex(flex, null, null);
+    @include flex(flex, center, null);
     gap: 10px;
 }
 .foter-soc-link{
