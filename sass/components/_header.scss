@@ -16,16 +16,15 @@
 }
 .navigation{
     @include flex(flex, center, null);
-    display: none;
 }
 
 .navigation__link{
-    display: none;
     @include font(500, 14px, 1.14, 0.02em);
     color: var(--header-link);
 }
 .navigation__list{
-    @include flex(flex, null, null);
+    display: none;
+    // @include flex(flex, null, null);
 }
 .navigation__item{
     padding-top: 32px;

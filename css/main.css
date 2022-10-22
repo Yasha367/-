@@ -167,7 +167,7 @@ body {
 }
 
 .navigation__list {
-  display: flex;
+  display: none;
 }
 
 .navigation__item {
@@ -273,7 +273,7 @@ body {
 
 .hero {
   background-color: #2F303A;
-  background-image: var(--gardient-bg), url(../img/desctop.jpg);
+  background-image: var(--gardient-bg), url(./img/desctop.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -281,36 +281,7 @@ body {
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--gardient-bg), url(../img/desctop2x.jpg);
-  }
-}
-@media screen and (min-width: 480px) {
-  .hero {
-    background-image: var(--gardient-bg), url(../img/mobale.jpg);
-    background-position: center;
-    background-size: cover;
-    margin: 0 auto;
-    padding-top: 118px;
-    padding-bottom: 118px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .hero {
-    background-image: var(--gardient-bg), url(../img/tablet.jpg);
-    background-position: center;
-    background-size: cover;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero {
-    background-image: var(--gardient-bg), url(../img/desctop.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 0 auto;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    background-image: var(--gardient-bg), url(./img/desctop2x.jpg);
   }
 }
 
