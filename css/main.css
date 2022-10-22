@@ -47,6 +47,7 @@ address {
   --leading-page: #2196f3;
   --portfolio-link:#212121;
   --link-color:#757575;
+  --gardient-bg:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) ;
 }
 
 .list {
@@ -272,13 +273,45 @@ body {
 
 .hero {
   background-color: #2F303A;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/backgrownd.jpg);
+  background-image: var(--gardient-bg), url(../img/desctop.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--gardient-bg), url(../img/desctop2x.jpg);
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero {
+    background-image: var(--gardient-bg), url(../img/mobale.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: var(--gardient-bg), url(../img/tablet.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: var(--gardient-bg), url(../img/desctop.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero-item {
@@ -311,10 +344,6 @@ body {
 .hero__title {
   margin-left: auto;
   margin-right: auto;
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.62;
-  letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -322,6 +351,27 @@ body {
 @media screen and (min-width: 480px) {
   .hero__title {
     max-width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    max-width: 696px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
   }
 }
 
