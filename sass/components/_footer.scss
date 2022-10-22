@@ -3,29 +3,37 @@
     padding-top: 60px;
     padding-bottom: 60px;
     @include flex(flex, null, null);
+    
 }
 .footer .container{
     @include flex(flex, null, null);
+    
+}
+.footer-all{
+    @include flex(flex, null, null);
+    margin-right: auto;
+    gap: 60px;
+    width: 100%;
+    // width: 100%;
     @media screen and (min-width: 480px){
         gap: 60px;
         flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
     }
     @media screen and (min-width: 768px){
-        width: calc((100% - 60px)/2);
         flex-direction: row;
         flex-wrap: wrap;
     }
     @media screen and (min-width: 1200px){
         width: calc((100% - 90px)/3);
         flex-wrap: nowrap;
+        gap: 165px;
+        justify-content: start;
+        margin-left: 0;
     }
 }
-.footer-addres{
-    @include flex(flex, center, null);
-    flex-direction: column;
-    flex-wrap: wrap;
-    @media screen and (min-width: 768px){
-    }
+.footer-navigation{
     @media screen and (min-width: 1200px){
         justify-content: start;
 
@@ -40,7 +48,16 @@
 .footer-logo-first{
     color: #2196F3;
     display: flex;
-    justify-content: center;
+    @media screen and (min-width: 480px){
+        justify-content: center;
+    }
+    @media screen and (min-width: 768px){
+        justify-content: center;
+    }
+    @media screen and (min-width: 1200px){
+        justify-content: start;
+        width: 100%;
+    }
 }
 
 .footer-item:not(:last-child){
@@ -49,7 +66,16 @@
 .footer-map{
     font-style: normal;
     display: flex;
-    justify-content: center;
+    @media screen and (min-width: 480px){
+        justify-content: center;
+    }
+    @media screen and (min-width: 768px){
+        justify-content: center;
+    }
+    @media screen and (min-width: 1200px){
+        justify-content: start;
+        width: 100%;
+    }
     @include font(null, 14px, 1.71, 0.03em);
     color: #FFFFFF;
 }
@@ -57,7 +83,16 @@
 .footer-contacts{
     font-style: normal;
     display: flex;
-    justify-content: center;
+    @media screen and (min-width: 480px){
+        justify-content: center;
+    }
+    @media screen and (min-width: 768px){
+        justify-content: center;
+    }
+    @media screen and (min-width: 1200px){
+        justify-content: start;
+        width: 100%;
+    }
     @include font(null, 14px, 1.71, 0.03em);
     color: rgba(255, 255, 255, 0.6);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -69,27 +104,36 @@
 
 .foter-connect{
     @include flex(flex, null, null);
+    gap: 20px;
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     @media screen and (min-width: 768px){
         width: calc((100% - 60px)/2);
         justify-content: center;
-        flex-direction: row;
+        // flex-direction: row;
         flex-wrap: wrap;
+    }
+    @media screen and (min-width: 768px){
+        justify-content: center;
+    }
+    @media screen and (min-width: 1200px){
+        justify-content: start;
+        // width: 100%;
     }
 }
 .foter-text{
-    // width: 100%;
     display: flex;
     justify-content: center;
     font-family: 'Roboto';
     font-style: normal;
     @include font(700, 14px, 1.14, 0.03em);
     color: #fff;
-    margin-bottom: 20px;
     @include flex(flex, null, null);
     text-transform: uppercase;
+    @media screen and (min-width: 1200px){
+        justify-content: start;
+    }
 }
 .foter-soc{
     @include flex(flex, center, null);
@@ -115,14 +159,25 @@
     // margin-left: 93px;
     width: 100%;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    @media screen and (min-width: 480px){
+        justify-content: center;
+        flex-direction: column;
+    }
+    @media screen and (min-width: 1200px){
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 }
 .foter-form{
-    @include flex(flex, center, null);
-    width: 100%;
-    flex-wrap: wrap;
+    @include flex(flex, null, null);
+    // width: 100%;
+    // flex-wrap: wrap;
+    flex-direction: column;
     gap: 12px;
+    @media screen and (min-width: 1200px){
+        margin-left: 93px;
+        flex-direction: row;
+    }
 }
 .foter-join-text{
     width: 100%;
@@ -148,6 +203,9 @@
     background-color: transparent;
     color: #FFFFFF;
     padding-left: 16px;
+    @media screen and (min-width: 1200px){
+        width: 358px;
+    }
     &:focus{
         outline-color: #2196f3;
         background-color: transparent;
@@ -157,6 +215,7 @@
 
 
 .foter-join-btn{
+    height: 50px;
     font-family: 'Roboto';
     font-style: normal;
     @include font(700, 16px, 1.88, 0.06em);

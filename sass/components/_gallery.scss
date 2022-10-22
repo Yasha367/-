@@ -4,6 +4,7 @@
 }
 
 .gallery-link{
+    width: 100%;
     flex-basis: auto;
     @include flex(block, null, null);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -22,15 +23,21 @@
     color:#757575;
 }
 .gallery-list{
-    @include flex(flex, center, null);
-    width: 100%;
+    @include flex(flex, null, null);
     flex-wrap: wrap;
     gap: 30px;
+    width: 100%;
+    @media screen and (min-width: 480px){
+        // flex-direction: column;
+        justify-content: center;
+        width: calc((100% - 30px)/1);
+    }
     @media screen and (min-width: 768px){
+        justify-content: center;
         width: calc((100% - 60px)/2);
     }
     @media screen and (min-width: 1200px){
-        width: calc((100% - 90px)/3);
+        width:100%;
     }
 }
 .gallery-top-wrap{

@@ -7,6 +7,7 @@
 
 .team-list{
     @include flex(flex, center, null);
+    width: 100%;
     flex-wrap: wrap;
     gap: 30px;
 }

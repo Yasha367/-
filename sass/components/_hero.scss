@@ -3,10 +3,10 @@
     background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/backgrownd.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% auto;
+    background-size: cover;
     margin: 0 auto;
-    padding-top: 118px;
-    padding-bottom: 118px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
 .hero-item{
     @include flex(flex, center, center);
@@ -19,7 +19,7 @@
     border: 0;
     @include flex(flex, center, center);
     margin-top: 30px;
-    @include font(700, 16px, 1.87, 0.06em);
+    @include font(700, 16px, 1.88, 0.06em);
     color: #FFFFFF;
     cursor: pointer;
     padding: 10px 32px;
@@ -28,10 +28,13 @@
     margin-right: auto;
 }
 .hero__title{
-    max-width: 696px;
+    @media screen and (min-width: 480px){
+        max-width: 360px;
+    }
+    // max-width: 696px;
     margin-left: auto;
     margin-right: auto;
-    @include font(900, 44px, 1.36, 0.06em);
+    @include font(900, 26px, 1.62, 0.06em);
     text-align: center;
     text-transform: uppercase;
     
