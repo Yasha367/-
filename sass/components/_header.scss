@@ -15,8 +15,12 @@
     color: var(--logo-title-second);
 }
 .navigation{
-    // @include flex(flex, center, null);
-    display: none;
+    @include mobale{
+        display: none;
+    }
+    @include tablet{
+        display: flex;
+    }
 }
 
 .navigation__link{
@@ -24,7 +28,6 @@
     color: var(--header-link);
 }
 .navigation__list{
-    // display: none;
     @include flex(flex, null, null);
 }
 .navigation__item{
@@ -63,16 +66,30 @@
 /* contact */
 .header__contacs-list{
     display: none;
-    // @include flex(flex, center, null);
+    @include tablet{
+        @include flex(flex, center, null);
+        flex-direction: column;
+        margin-left: 96px;
+    }
+    @include desctop{
+        flex-direction: row;
+        margin-left: auto;
+    }
     margin-left: auto;
     padding-top: 32px;
     padding-bottom: 32px;
 }
 .header__item-contact{
     @include flex(flex, null, null);
-    &:not(:last-child){
-        margin-right: 50px;
+    @include tablet{
+        margin-bottom: 10px;
     }
+    @include desctop{
+        &:not(:last-child){
+            margin-right: 50px;
+        }
+    }
+    
 }
 .header__mail{
     @include font(500, 14px, 1.14, 0.02em);
@@ -116,10 +133,23 @@
 }
 // Mobale 
 .mob-open-btn{
+    display: none;
+    @include mobale{
+        display: flex;
+    }
     background-color: transparent;
     border: none;
     cursor: pointer;
     margin-left: auto;
+}
+.mobale-svg{
+    display: none;
+    @include mobale{
+        display: flex;
+    }
+    @include tablet{
+        display: none;
+    }
 }
 .mob-menu{
     position: fixed;
@@ -129,6 +159,12 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    >.container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 .mob-cloce-btn {
     display: block;
@@ -137,11 +173,16 @@
     border: none;
     cursor: pointer;
     margin-left: auto;
+    top: 10;
+    &:hover,
+    &:focus{
+        fill: #2196F3;
+    }
 }
 .icon-close {
 }
 .mob-navigation {
-    margin-bottom: 300px;
+    // margin-bottom: 300px;
 }
 .mob-navigation__list {
 }
@@ -169,8 +210,15 @@
     color: #2196F3;
 }
 .mob-soc-list {
+    display: flex;
+    gap: 10px;
 }
-.mod-soc-item {
+.mod-soc-item:not(:last-child)::after {
+    content: '';
+    width: 22px;
+    margin-left: 10px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
 }
 .mob-soc-link {
     @include font(500, 18px, 1.22, 0.02em);

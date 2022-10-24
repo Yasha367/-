@@ -154,8 +154,15 @@ body {
   color: var(--logo-title-second);
 }
 
-.navigation {
-  display: none;
+@media screen and (min-width: 480px) {
+  .navigation {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
 }
 
 .navigation__link {
@@ -213,12 +220,33 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+@media screen and (min-width: 768px) {
+  .header__contacs-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 96px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacs-list {
+    flex-direction: row;
+    margin-left: auto;
+  }
+}
 
 .header__item-contact {
   display: flex;
 }
-.header__item-contact:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 768px) {
+  .header__item-contact {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__item-contact:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .header__mail {
@@ -271,10 +299,30 @@ body {
 }
 
 .mob-open-btn {
+  display: none;
   background-color: transparent;
   border: none;
   cursor: pointer;
   margin-left: auto;
+}
+@media screen and (min-width: 480px) {
+  .mob-open-btn {
+    display: flex;
+  }
+}
+
+.mobale-svg {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  .mobale-svg {
+    display: flex;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobale-svg {
+    display: none;
+  }
 }
 
 .mob-menu {
@@ -286,6 +334,12 @@ body {
   width: 100vw;
   height: 100vh;
 }
+.mob-menu > .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .mob-cloce-btn {
   display: block;
@@ -294,10 +348,10 @@ body {
   border: none;
   cursor: pointer;
   margin-left: auto;
+  top: 10;
 }
-
-.mob-navigation {
-  margin-bottom: 300px;
+.mob-cloce-btn:hover, .mob-cloce-btn:focus {
+  fill: #2196F3;
 }
 
 .mob-navigation__item:not(:last-child) {
@@ -334,6 +388,19 @@ body {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #2196F3;
+}
+
+.mob-soc-list {
+  display: flex;
+  gap: 10px;
+}
+
+.mod-soc-item:not(:last-child)::after {
+  content: "";
+  width: 22px;
+  margin-left: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
 }
 
 .mob-soc-link {
