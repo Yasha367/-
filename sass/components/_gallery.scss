@@ -26,18 +26,14 @@
     @include flex(flex, null, null);
     flex-wrap: wrap;
     gap: 30px;
+}
+.gallery-item{
     width: 100%;
-    @media screen and (min-width: 480px){
-        // flex-direction: column;
-        justify-content: center;
-        width: calc((100% - 30px)/1);
+    @include tablet {
+        width: calc((100% - 30px) / 2);
     }
-    @media screen and (min-width: 768px){
-        justify-content: center;
-        width: calc((100% - 60px)/2);
-    }
-    @media screen and (min-width: 1200px){
-        width:100%;
+    @include desctop{
+        width: calc((100% - 60px) / 3);
     }
 }
 .gallery-top-wrap{

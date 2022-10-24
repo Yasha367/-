@@ -15,7 +15,8 @@
     color: var(--logo-title-second);
 }
 .navigation{
-    @include flex(flex, center, null);
+    // @include flex(flex, center, null);
+    display: none;
 }
 
 .navigation__link{
@@ -23,8 +24,8 @@
     color: var(--header-link);
 }
 .navigation__list{
-    display: none;
-    // @include flex(flex, null, null);
+    // display: none;
+    @include flex(flex, null, null);
 }
 .navigation__item{
     padding-top: 32px;
@@ -61,7 +62,8 @@
 }
 /* contact */
 .header__contacs-list{
-    @include flex(flex, center, null);
+    display: none;
+    // @include flex(flex, center, null);
     margin-left: auto;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -111,4 +113,66 @@
 .header__ico{
     fill: #757575;
     margin-right: 10px;
+}
+// Mobale 
+.mob-open-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+.mob-menu{
+    position: fixed;
+    background-color: #fff;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.mob-cloce-btn {
+    display: block;
+    margin-left: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+.icon-close {
+}
+.mob-navigation {
+    margin-bottom: 300px;
+}
+.mob-navigation__list {
+}
+.mob-navigation__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+.mob-navigation__link {
+    @include font(500, 40px, 1.17,0.02em);
+    color: #212121;
+}
+.link {
+}
+.mob__contacs-list {
+    margin-bottom: 64px;
+}
+.mob__item-contact:not(:last-child) {
+    margin-bottom: 32px;
+}
+.mob__mail {
+    @include font(500, 24px, 1.16, 0.02em);
+    color: #757575;
+}
+.mob__tel {
+    @include font(500, 34px, 1.17, 0.02em);
+    color: #2196F3;
+}
+.mob-soc-list {
+}
+.mod-soc-item {
+}
+.mob-soc-link {
+    @include font(500, 18px, 1.22, 0.02em);
+    color: #2196F3;
 }
