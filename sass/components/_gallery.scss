@@ -29,6 +29,9 @@
 }
 .gallery-item{
     width: 100%;
+    @include mobale{
+        flex-direction: column;
+    }
     @include tablet {
         width: calc((100% - 30px) / 2);
     }

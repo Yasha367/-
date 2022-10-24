@@ -7,20 +7,25 @@
 }
 .header__logo-first{
     color: var(--logo-title-first);
-    margin-right: 93px;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    @media screen and (min-width: 480px){
+        margin-right: 0;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    // margin-right: 93px;
+    // padding-top: 24px;
+    // padding-bottom: 24px;
 }
 .header__logo-second{
     color: var(--logo-title-second);
 }
 .navigation{
-    @include mobale{
+    @media screen and (min-width: 480px){
         display: none;
     }
-    @include tablet{
-        display: flex;
-    }
+    // @media screen and (min-width: 768px){
+    //     display: flex;
+    // }
 }
 
 .navigation__link{
@@ -65,16 +70,19 @@
 }
 /* contact */
 .header__contacs-list{
-    display: none;
-    @include tablet{
-        @include flex(flex, center, null);
-        flex-direction: column;
-        margin-left: 96px;
+    @media screen and (min-width: 480px){
+        display: none;
     }
-    @include desctop{
-        flex-direction: row;
-        margin-left: auto;
-    }
+    // @media screen and (min-width: 768px){
+    //     @include flex(flex, center, null);
+    //     flex-direction: column;
+    //     margin-left: auto;
+    // }
+    // @media screen and (min-width: 1200px){
+    //     display: flex;
+    //     flex-direction: row;
+    //     margin-left: auto;
+    // }
     margin-left: auto;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -133,23 +141,22 @@
 }
 // Mobale 
 .mob-open-btn{
-    display: none;
-    @include mobale{
+    
+    @media screen and (max-width: 480px){
         display: flex;
     }
+    // @media screen and (max-width: 768px){
+    //     display: none;
+    // }
+    // @media screen and (max-width: 1200px){
+    //     display: none;
+    // }
     background-color: transparent;
     border: none;
     cursor: pointer;
     margin-left: auto;
 }
 .mobale-svg{
-    display: none;
-    @include mobale{
-        display: flex;
-    }
-    @include tablet{
-        display: none;
-    }
 }
 .mob-menu{
     position: fixed;

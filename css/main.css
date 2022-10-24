@@ -61,7 +61,6 @@ address {
 }
 
 .container {
-  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
@@ -145,9 +144,13 @@ body {
 
 .header__logo-first {
   color: var(--logo-title-first);
-  margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+}
+@media screen and (min-width: 480px) {
+  .header__logo-first {
+    margin-right: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 .header__logo-second {
@@ -157,11 +160,6 @@ body {
 @media screen and (min-width: 480px) {
   .navigation {
     display: none;
-  }
-}
-@media screen and (min-width: 768px) {
-  .navigation {
-    display: flex;
   }
 }
 
@@ -215,23 +213,13 @@ body {
 
 /* contact */
 .header__contacs-list {
-  display: none;
   margin-left: auto;
   padding-top: 32px;
   padding-bottom: 32px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .header__contacs-list {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 96px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .header__contacs-list {
-    flex-direction: row;
-    margin-left: auto;
+    display: none;
   }
 }
 
@@ -299,29 +287,14 @@ body {
 }
 
 .mob-open-btn {
-  display: none;
   background-color: transparent;
   border: none;
   cursor: pointer;
   margin-left: auto;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .mob-open-btn {
     display: flex;
-  }
-}
-
-.mobale-svg {
-  display: none;
-}
-@media screen and (min-width: 480px) {
-  .mobale-svg {
-    display: flex;
-  }
-}
-@media screen and (min-width: 768px) {
-  .mobale-svg {
-    display: none;
   }
 }
 
@@ -541,6 +514,11 @@ body {
 .prices-item {
   flex-basis: 100%;
 }
+@media screen and (min-width: 480px) {
+  .prices-item {
+    flex-basis: calc((100% - 30px) / 1);
+  }
+}
 @media screen and (min-width: 768px) {
   .prices-item {
     flex-basis: calc((100% - 30px) / 2);
@@ -569,7 +547,6 @@ body {
 
 .prices-text {
   display: flex;
-  justify-content: center;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
@@ -1201,6 +1178,11 @@ body {
 
 .gallery-item {
   width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .gallery-item {
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 768px) {
   .gallery-item {

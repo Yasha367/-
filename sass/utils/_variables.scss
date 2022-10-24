@@ -58,7 +58,7 @@ address {
   }
 
 .container {
-    width: 100%;
+    // width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: auto;
@@ -72,6 +72,7 @@ address {
     @media screen and (min-width: 1200px) {
         max-width: 1200px;
     }
+    
 }
 .portfolio-container {
     width: 100%;
