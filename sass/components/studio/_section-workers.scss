@@ -1,0 +1,110 @@
+/* workers */
+
+.section-workers {
+    background-color: $section-background-color;
+}
+
+.workers {
+    @extend %list;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-wrap: wrap;
+      margin: -15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+    }
+
+    &__item {
+        background-color: $primary-white-color;
+        border-radius: 0px 0px 4px 4px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 1px 1px rgba(0, 0, 0, 0.14),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            margin: 15px;
+            width: calc((100% - 4 * 15px) / 2);
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
+        
+        &:not(:last-child) {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+/* workers-card */
+
+.workers-card {
+    padding: 30px 32px;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 10px;
+
+        color: $title-text-color;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    &__text {
+        margin-bottom: 16px;
+
+        font-size: 16px;
+        line-height: 1.9;
+    }
+}
+
+/* workers-social */
+
+.workers-social {
+    @extend %list;
+
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 206px;
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+
+        color: $background-color-icon;
+
+        background-color: $primary-white-color;
+        border-radius: 50%;
+
+        transition: background-color $time-animation $timing-function,
+            color $time-animation $timing-function;
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+
+    &__link:hover {
+        color: $primary-white-color;
+
+        background-color: $accent-color;
+    }
+}

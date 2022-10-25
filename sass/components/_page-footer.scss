@@ -1,0 +1,226 @@
+/* page-footer */
+
+.page-footer {
+    padding: 60px 0;
+
+    background-color: $secondary-background-color;
+    
+    &__container {
+        @media screen and (min-width: 768px) {
+            display: flex;
+        }
+        
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            flex-wrap: wrap;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            align-items: baseline;
+        }
+    }
+}
+
+/* footer adress */
+
+.page-footer__adress {
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: inline-block;
+        margin-left: 76px;
+    }
+}
+
+.footer-adress {
+    @extend %list;
+
+    &__item {
+        margin-bottom: 9px;
+    }
+
+    &__item:nth-child(3n) {
+        margin-bottom: 0;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: $accent-color;
+    }
+
+    &__link {
+        color: $adress-footer;
+        font-style: normal;
+        line-height: 1.7;
+        text-decoration: none;
+
+        transition: color $time-animation $timing-function;
+    }
+
+    &__text {
+        color: $primary-white-color;
+        font-style: normal;
+        line-height: 1.7;
+    }
+}
+
+/* footer social-link */
+
+.page-footer__social {
+    &--text {
+        margin-bottom: 20px;
+
+        color: $primary-white-color;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+    }
+    
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+    
+    @media screen and (min-width: 768px) {
+      margin-left: 165px;
+    }
+    
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: 70px;
+    }
+}
+
+.footer-social {
+    @extend %list;
+
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 206px;
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+
+        color: $primary-white-color;
+
+        background-color: $background-footer-link-color;
+        border-radius: 50%;
+
+        transition: background-color $time-animation $timing-function;
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+
+    &__link:hover {
+        background-color: $accent-color;
+    }
+}
+
+/* footer-form */
+
+.page-footer__form {
+    &--text {
+        margin-bottom: 20px;
+
+        color: $primary-white-color;
+        font-weight: 700;
+        line-height: 1.14;
+        text-transform: uppercase;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 93px;
+    }
+}
+
+.footer-form {
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+
+        &__field {
+            margin-bottom: 20px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+
+    &__icon {
+        margin-left: 10px;
+    }
+
+    &__btn {
+        @extend %pointer;
+        
+        @extend %btn;
+        
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 12px;
+        }
+    }
+}
+
+.footer-form__input {
+    @extend %pointer;
+
+    padding: 15px 16px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+
+    color: $adress-footer;
+
+    background-color: $secondary-background-color;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    transition: border $time-animation $timing-function,
+        box-shadow $time-animation $timing-function;
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+    }
+
+    &::placeholder {
+        color: $adress-footer;
+        line-height: 1.25;
+    }
+
+    &:focus {
+        border: 1px solid $accent-color;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+        outline: none;
+    }
+}
+

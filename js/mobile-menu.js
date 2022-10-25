@@ -1,23 +1,14 @@
 (() => {
-    const refs = {
-      openMenuBtn: document.querySelector("[js-open-menu]"),
-      closeMenuBtn: document.querySelector("[js-close-menu]"),
-      menu: document.querySelector("[js-menu]"),
-      body: document.querySelector('body'),
-      menuList: document.querySelector('mob-navigation__list')
-    };
-  
-    refs.openMenuBtn.addEventListener("click", toggleMenu);
-    refs.closeMenuBtn.addEventListener("click", toggleMenu);
-    refs.menuList.addEventListener("click", removeMenu);
-  
-    function toggleMenu() {
-      refs.menu.classList.toggle("is-hidden");
-      refs.body.classList.toggle("no-scroll");
-    }
+  const menuBtnRef = document.querySelector("[data-menu-button]");
+  const mobileMenuRef = document.querySelector("[data-menu]");
 
-    function removeMenu() {
-      refs.menu.classList.add("is-hidden");
-      refs.body.classList.remove("no-scroll");
-    }
-  })();
+  menuBtnRef.addEventListener("click", () => {
+    const expanded =
+      menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+
+    menuBtnRef.classList.toggle("nav__btn--is-open");
+    menuBtnRef.setAttribute("aria-expanded", !expanded);
+
+    mobileMenuRef.classList.toggle("mobile-menu--is-open");
+  });
+})();

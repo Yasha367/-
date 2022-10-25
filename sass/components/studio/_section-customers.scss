@@ -1,0 +1,65 @@
+/* customers */
+
+.customers {
+    @extend %list;
+
+    display: flex;
+    
+    @media screen and (max-width: 1199px) {
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    &__item {
+        @media screen and (max-width: 767px) {
+            width: calc((100% - 4 * 15px) / 2);
+        }
+        
+        @media screen and (min-width: 768px) {
+            width: calc((100% - 6 * 15px) / 3);
+        }
+        
+        @media screen and (max-width: 1199px) {
+            margin: 15px;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+        }
+        
+        &:not(:last-child) {
+            @media screen and (min-width: 1200px) {
+                margin-right: 30px;
+            }
+        }
+    }
+    
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 92px;
+    
+        color: $background-color-icon;
+    
+        background-color: $primary-white-color;
+        border: 1px solid $background-color-icon;
+        border-radius: 4px;
+    
+        transition: background-color $time-animation $timing-function,
+            color $time-animation $timing-function,
+            border $time-animation $timing-function;
+    }
+    
+    &__icon {
+        fill: currentColor;
+    }
+    
+    &__link:hover {
+        color: $accent-color;
+    
+        background-color: $primary-white-color;
+        border: 1px solid $accent-color;
+    }
+}

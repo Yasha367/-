@@ -1,21 +1,19 @@
-@import './utils/variables';
-@import './utils/mixin';
+@import "./base/normalize";
+@import "./utils/variables";
 
-@import './components/header';
-@import './components/hero';
-@import './components/prices';
-@import './components/occupations';
-@import './components/team';
-@import './components/customer';
-@import './components/footer';
+@import "./components/page-header";
 
+@import "./components/studio/hero";
+@import "./components/studio/backdrop";
+@import "./components/studio/modal";
+@import "./components/studio/modal-form";
 
-@import './components/portfolio';
-@import './components/portfolio-header';
-@import './components/portfolio-main.scss';
-@import './components/choice-buttons';
-@import './components/gallery';
-@import './components/portfolio-footer';
+@import "./components/studio/section-features";
 
+@import "./components/studio/section-services";
 
-@import './components/modal';
+@import "./components/studio/section-workers";
+
+@import "./components/studio/section-customers";
+
+@import "./components/page-footer";

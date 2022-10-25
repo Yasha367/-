@@ -1,0 +1,79 @@
+.modal {
+    padding: 40px;
+
+    background-color: $primary-white-color;
+    border-radius: 4px;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+
+    transform: scale(1);
+    transition: transform $time-animation $timing-function;
+
+    @media screen and (max-width: 767px) {
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 450px;
+        min-height: 610px;
+
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+  
+  @media screen and (min-width: 1200px) {
+      min-width: 530px;
+      min-height: 580px;
+  }
+
+  &__title {
+      margin-bottom: 12px;
+
+      color: $title-text-color;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.5;
+      text-align: center;
+
+      @media screen and (min-width: 1200px) {
+          line-height: 1.15;
+      }
+  }
+}
+
+/* modal button close */
+
+.modal__btn--close {
+    @extend %pointer;
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    background-color: $primary-white-color;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    transform: translate(-8px, 8px);
+    transition: color $time-animation $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.modal__btn-icon {
+    fill: currentColor;
+}

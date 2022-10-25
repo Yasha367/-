@@ -1,0 +1,88 @@
+/* animation link */
+
+.examples-card__link {
+    display: inline-block;
+
+    transition: box-shadow $time-animation $timing-function;
+
+    &:hover,
+    &:hover {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+}
+
+/* animation example card */
+
+.examples-card {
+    position: relative;
+
+    overflow: hidden;
+
+    &:hover::before {
+        content: '';
+        opacity: 1;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+        width: 100%;
+        height: 100%;
+    
+        background-color: $accent-color-examples-cards;
+    
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform $time-animation $timing-function,
+            opacity $time-animation $timing-function;
+    }
+
+    &__description {
+        position: absolute;
+    
+        margin: 63px 24px;
+    
+        color: $primary-white-color;
+        font-size: 18px;
+        line-height: 1.56;
+    }
+}
+
+.examples-card__link:hover .examples-card__overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* example-card */
+
+.examples-card__wrapper {
+    padding: 20px 24px;
+
+    border: 1px solid $cards-border-color;
+
+    &-title {
+        margin-bottom: 4px;
+
+        color: $title-text-color;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+
+        background-color: $primary-white-color;
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        height: 146px;
+    }
+
+    &-text {
+        color: $primary-text-color;
+        font-size: 16px;
+        line-height: 1.9;
+    }
+}
