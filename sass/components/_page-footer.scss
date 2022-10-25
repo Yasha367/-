@@ -69,9 +69,9 @@
 /* footer social-link */
 
 .page-footer__social {
+    align-items: baseline;
     &--text {
         margin-bottom: 20px;
-
         color: $primary-white-color;
         font-weight: 700;
         line-height: 1.14;
@@ -83,13 +83,16 @@
     }
     
     @media screen and (min-width: 768px) {
-      margin-left: 165px;
+        align-items: baseline;
+        margin-left: 165px;
     }
     
     @media screen and (max-width: 1199px) {
+        align-items: baseline;
         text-align: center;
     }
     @media screen and (min-width: 1200px) {
+        align-items: baseline;
         margin-left: 70px;
     }
 }
