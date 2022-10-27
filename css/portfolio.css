@@ -910,7 +910,7 @@ img {
     display: flex;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .page-footer__container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;

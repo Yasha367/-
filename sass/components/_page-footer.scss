@@ -6,11 +6,12 @@
     background-color: $secondary-background-color;
     
     &__container {
+        // align-items: baseline;
         @media screen and (min-width: 768px) {
             display: flex;
         }
         
-        @media screen and (min-width: 768px){
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
             flex-wrap: wrap;
             align-items: baseline;
         }
