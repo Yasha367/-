@@ -172,7 +172,18 @@
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="workers">
                     <li class="workers__item">
-                        <img
+                        <picture>
+                            <source srcset="./images/img4-des.jpg 1x, ./images/img4-des-2x.jpg" type="min-width:1200px;">
+                            <source srcset="./images/img4-tab.jpg 1x, ./images/img4-tab-2x.jpg" type="min-width:768px;">
+                            <source srcset="./images/img4-mod.jpg 1x, ./images/img4-mob-2x.jpg" type="max-width:767px;">
+                            <img
+                                src="./images/img4-mob.jpg"
+                                alt="Product Designer"
+                                width="450"
+                                height="460"
+                            />
+                        </picture>
+                        <!-- <img
                           srcset="
                             ./images/img4-450-min.jpg   450w,
                             ./images/img4-900-min.jpg   900w,
@@ -180,7 +191,7 @@
                             "
                             src="./images/img4-450-min.jpg" alt="Product Designer"
                             sizes="(min-width: 1200px) 450px, (min-width: 768px) 900px, (min-width: 480px) 1350px, 100vw" 
-                        />
+                        /> -->
                         <div class="workers-card">
                             <h3 class="workers-card__title">Ігор Дем'яненко</h3>
                             <p class="workers-card__text">Product Designer</p>
@@ -216,7 +227,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="workers__item">
+                    <!-- <li class="workers__item">
                         <img
                           srcset="
                             ./images/img5-450-min.jpg   450w,
@@ -347,7 +358,7 @@
                                             <use href="./images/symbol-defs.svg#linkedin-1"></use>
                                         </svg>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </li>
